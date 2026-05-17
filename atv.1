@@ -1,0 +1,38 @@
+// -------------------------------------------------------------------------
+// METODO SIMPLES: Criando o título principal usando innerHTML
+// -------------------------------------------------------------------------
+
+// Capturamos o body da página
+const body = document.querySelector('body');
+
+// Criamos uma tag h1 com o id="titulo" usando o método simples
+body.innerHTML = `<h1 id="titulo">Bem-vindo à nossa Loja Virtual!</h1>`;
+
+
+// -------------------------------------------------------------------------
+// MÉTODO COMPLEXO: Criando o produto e seus elementos filhos estruturados
+// -------------------------------------------------------------------------
+
+// 1. Criamos o elemento container principal do produto (uma div ou section)
+const produtoContainer = document.createElement('div');
+produtoContainer.id = 'produto';
+
+// 2. Criamos o elemento para o Nome do Produto
+const produtoNome = document.createElement('h2');
+produtoNome.innerText = 'Smartphone Ultima X';
+
+// 3. Criamos o elemento para a Descrição do Produto
+const produtoDescricao = document.createElement('p');
+produtoDescricao.innerText = 'O smartphone mais rápido do mercado, com tela AMOLED de 6.7 polegadas e câmera de 108MP.';
+
+// 4. Criamos o elemento para o Preço do Produto
+const produtoPreco = document.createElement('strong');
+produtoPreco.innerText = 'Preço: R$ 3.499,00';
+
+// 5. Adicionamos os elementos filhos dentro do container do produto (na ordem correta)
+produtoContainer.appendChild(produtoNome);
+produtoContainer.appendChild(produtoDescricao);
+produtoContainer.appendChild(produtoPreco);
+
+// 6. Por fim, adicionamos o container do produto completo dentro do body da página
+body.appendChild(produtoContainer);
